@@ -37,7 +37,7 @@ void sift_down(int *array, size_t start, size_t end, size_t size)
 
 	while (leftchild(rt) <= end)
 	{
-		child = leftchild(root);
+		child = leftchild(rt);
 		_swp = rt;
 		if (array[_swp] < array[child])
 			_swp = child;
@@ -46,7 +46,7 @@ void sift_down(int *array, size_t start, size_t end, size_t size)
 			_swp = child + 1;
 		if (_swp == rt)
 			return;
-		swp(array, size, &array[rt], &array[_swp]);
+		swap(array, size, &array[rt], &array[_swp]);
 		rt = _swp;
 	}
 }
